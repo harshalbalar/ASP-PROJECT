@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="navbar.master.cs" Inherits="Registration.navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+<style>
+.option {
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 2px;
+    color: #fff;
+    z-index: 3;
+    top: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    /* border: 1px solid wheat; */
+}
+.option a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid wheat;     */
+    color: #fff;
+    text-decoration: none;
+}
+.option i {
+    padding:5px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+::-webkit-scrollbar {
+    width: 15px; 
+    height: 20px; 
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ff850a,#ff3474);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+    background: #474747;
+}
+ 
+</style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="main.aspx">Home</a></li>
+                    <li><a href="#abouts">About Us</a></li>
+                    <li><a href="#places">Places</a></li>
+                    <li><a href="offers.aspx">Offers</a></li>
+                    <li><a href="quick_inquiry.aspx">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="option">
+                <a href="login.aspx"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login now</a>
+                <a href="profile.aspx"> Welcome <br></a>
+                <a href="logout.aspx"> <i class="fa-solid fa-right-from-bracket"></i> Logout </a>
+            </div>
+        </div>
+    
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
